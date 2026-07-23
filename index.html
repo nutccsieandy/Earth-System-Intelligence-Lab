@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FlowResilienceAI — An AI-powered landslide and flood resilience platform integrating open data, GIS, machine learning, RAG, and LLMs." />
+  <meta name="theme-color" content="#071524" />
+  <title>FlowResilienceAI | AI Disaster Resilience Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="FlowResilienceAI">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 4C14 4 7 11.4 7 21c0 12.2 13 22.5 16.1 24.8a1.5 1.5 0 0 0 1.8 0C28 43.5 41 33.2 41 21 41 11.4 34 4 24 4Zm0 8.2a8.8 8.8 0 1 1 0 17.6 8.8 8.8 0 0 1 0-17.6Z"/></svg>
+        </span>
+        <span>
+          <strong>FlowResilienceAI</strong>
+          <small>Earth System Intelligence Lab</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#overview" data-i18n="navOverview">專案概覽</a>
+        <a href="#features" data-i18n="navFeatures">核心功能</a>
+        <a href="#architecture" data-i18n="navArchitecture">系統架構</a>
+        <a href="#team" data-i18n="navTeam">團隊</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">EN</button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#overview" data-i18n="navOverview">專案概覽</a>
+      <a href="#features" data-i18n="navFeatures">核心功能</a>
+      <a href="#architecture" data-i18n="navArchitecture">系統架構</a>
+      <a href="#team" data-i18n="navTeam">團隊</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            <span data-i18n="heroEyebrow">2026 總統盃黑客松國際組提案</span>
+          </div>
+          <h1>
+            <span data-i18n="heroTitle1">用 AI 強化</span>
+            <span class="gradient-text" data-i18n="heroTitle2">災害韌性決策</span>
+          </h1>
+          <p class="hero-description" data-i18n="heroDescription">
+            整合政府開放資料、GIS、機器學習、RAG 與大型語言模型，將分散的災害資訊轉化為即時風險評估、事件摘要與可執行的應變建議。
+          </p>
+          <div class="hero-actions">
+            <!-- Replace the links below with your actual YouTube and GitHub URLs -->
+            <a class="btn btn-primary" href="https://youtu.be/NvuhsclEA8o" target="_blank" rel="noopener">
+              <span data-i18n="watchDemo">觀看操作影片</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=rqwSGvDxAS4" target="_blank" rel="noopener">
+              <span data-i18n="watchExplanation">觀看解說影片</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/nutccsieandy/FlowResilienceAI" target="_blank" rel="noopener">
+              <span data-i18n="viewGithub">查看 GitHub</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span>AI</span><span>Open Data</span><span>GIS</span><span>RAG</span><span>LLM</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="FlowResilienceAI dashboard concept">
+          <div class="dashboard-shell">
+            <div class="dashboard-topbar">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span data-i18n="liveMonitor">Live Resilience Monitor</span>
+              <span class="status-online"><i></i> ONLINE</span>
+            </div>
+            <div class="dashboard-content">
+              <div class="mini-sidebar">
+                <span class="active">◈</span><span>⌁</span><span>◫</span><span>◎</span>
+              </div>
+              <div class="map-panel">
+                <div class="map-grid"></div>
+                <svg class="taiwan-shape" viewBox="0 0 160 300" role="img" aria-label="Stylized Taiwan risk map">
+                  <path d="M97 8c-12 18-10 34-20 53-9 18-25 27-31 48-8 30 8 50 2 75-6 25-24 42-21 68 2 15 12 25 23 39 11-9 18-19 23-31 8-20 8-44 19-62 10-17 24-28 27-49 4-29-10-48-9-74 0-19 8-38-13-67Z"/>
+                  <circle cx="87" cy="72" r="7"/><circle cx="68" cy="139" r="8"/><circle cx="76" cy="210" r="6"/>
+                </svg>
+                <div class="risk-chip risk-high"><span></span><b data-i18n="highRisk">高風險</b><small>Hualien</small></div>
+                <div class="risk-chip risk-medium"><span></span><b data-i18n="mediumRisk">中風險</b><small>Central</small></div>
+                <div class="map-caption">
+                  <strong data-i18n="realTimeRisk">即時災害風險</strong>
+                  <small data-i18n="dataUpdated">資料持續更新中</small>
+                </div>
+              </div>
+              <div class="insight-panel">
+                <div class="metric">
+                  <small data-i18n="rainfall">24 小時累積雨量</small>
+                  <strong>328 <em>mm</em></strong>
+                  <span class="trend">↑ 18.4%</span>
+                </div>
+                <div class="metric">
+                  <small data-i18n="riskIndex">綜合風險指數</small>
+                  <strong>82 <em>/100</em></strong>
+                  <div class="progress"><i style="width:82%"></i></div>
+                </div>
+                <div class="copilot-card">
+                  <div class="copilot-title"><span>✦</span> AI Copilot</div>
+                  <p data-i18n="copilotText">東部山區短時強降雨持續，建議提高土石流警戒並預先部署避難資源。</p>
+                  <div class="typing"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-badge badge-one"><b>6+</b><span data-i18n="openDatasets">政府開放資料源</span></div>
+          <div class="floating-badge badge-two"><b>24/7</b><span data-i18n="monitoring">即時監測</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container">
+        <p data-i18n="dataSourcesLabel">整合臺灣權威政府開放資料</p>
+        <div class="source-list">
+          <span>CWA</span><span>WRA</span><span>NLSC</span><span>GSMMA</span><span>ARDSWC</span><span>NCDR</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-tag" data-i18n="overviewTag">PROJECT OVERVIEW</span>
+          <h2 data-i18n="overviewTitle">從資料碎片到可執行的災害決策</h2>
+          <p data-i18n="overviewText">FlowResilienceAI 建立政府、救災單位與民眾之間的智慧資訊橋梁，降低資訊落差並縮短應變時間。</p>
+        </div>
+        <div class="overview-grid">
+          <article class="problem-card">
+            <span class="card-index">01</span>
+            <div class="icon-wrap">!</div>
+            <h3 data-i18n="problemTitle">現行挑戰</h3>
+            <p data-i18n="problemText">災害資訊分散於多個機關，格式不一、更新頻率不同，難以在關鍵時刻形成完整態勢判斷。</p>
+          </article>
+          <article class="solution-card">
+            <span class="card-index">02</span>
+            <div class="icon-wrap">✦</div>
+            <h3 data-i18n="solutionTitle">我們的方案</h3>
+            <p data-i18n="solutionText">透過資料整合、智慧分析與生成式 AI，提供風險分級、事件摘要、GIS 視覺化和個人化應變建議。</p>
+          </article>
+          <article class="impact-card">
+            <span class="card-index">03</span>
+            <div class="icon-wrap">↗</div>
+            <h3 data-i18n="impactTitle">預期影響</h3>
+            <p data-i18n="impactText">協助決策者加速資源配置與跨機關協作，同時讓民眾獲得清楚、即時且可採取行動的安全資訊。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-heading split">
+          <div>
+            <span class="section-tag" data-i18n="featuresTag">CORE CAPABILITIES</span>
+            <h2 data-i18n="featuresTitle">一個平台，串起完整災害應變流程</h2>
+          </div>
+          <p data-i18n="featuresText">從即時監控、AI 分析到公眾溝通，兼顧政府管理端與民眾使用端。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">⌖</div>
+            <h3 data-i18n="feature1Title">即時資料整合</h3>
+            <p data-i18n="feature1Text">彙整氣象、雨量、水文、地質、土石流與災防警報等異質資料。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">◫</div>
+            <h3 data-i18n="feature2Title">互動式 GIS</h3>
+            <p data-i18n="feature2Text">以地圖呈現高風險區域、事件分布與環境參數，快速掌握空間態勢。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⌁</div>
+            <h3 data-i18n="feature3Title">AI 風險評估</h3>
+            <p data-i18n="feature3Text">運用機器學習評估洪水、山崩與極端降雨風險，產生可解釋的分級結果。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3 data-i18n="feature4Title">AI Copilot</h3>
+            <p data-i18n="feature4Text">透過 RAG 與 LLM 生成事件摘要、風險說明與具體應變建議。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">▣</div>
+            <h3 data-i18n="feature5Title">政府管理後台</h3>
+            <p data-i18n="feature5Text">支援事件管理、資源配置、跨機關協調與決策紀錄。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">◉</div>
+            <h3 data-i18n="feature6Title">民眾 PWA</h3>
+            <p data-i18n="feature6Text">提供行動裝置友善的警示通知、安全指引與個人化避難資訊。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="container architecture-layout">
+        <div class="architecture-copy">
+          <span class="section-tag" data-i18n="architectureTag">SYSTEM ARCHITECTURE</span>
+          <h2 data-i18n="architectureTitle">可擴充、可部署、可跨區域移植</h2>
+          <p data-i18n="architectureText">模組化架構讓不同資料來源、AI 模型與服務能彈性替換，並透過 Docker 快速部署至不同地區與情境。</p>
+          <ul class="check-list">
+            <li data-i18n="architectureItem1">開放資料與即時環境資料串接</li>
+            <li data-i18n="architectureItem2">機器學習、RAG 與 LLM 分析層</li>
+            <li data-i18n="architectureItem3">GIS、管理後台與 PWA 應用層</li>
+            <li data-i18n="architectureItem4">Docker 容器化與模組化部署</li>
+          </ul>
+        </div>
+        <div class="architecture-diagram" aria-label="System architecture diagram">
+          <div class="arch-row">
+            <div class="arch-node"><span>01</span><b data-i18n="archData">資料層</b><small>Open Data · IoT · API</small></div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node"><span>02</span><b data-i18n="archAI">AI 分析層</b><small>ML · RAG · LLM</small></div>
+          </div>
+          <div class="arch-connector">↓</div>
+          <div class="arch-row">
+            <div class="arch-node"><span>03</span><b data-i18n="archService">服務層</b><small>Risk API · Alert Engine</small></div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node"><span>04</span><b data-i18n="archApp">應用層</b><small>Dashboard · GIS · PWA</small></div>
+          </div>
+          <div class="docker-base">Dockerized Modular Infrastructure</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-tag">OPEN DATA & SDGs</span>
+          <h2 data-i18n="openTitle">以開放資料驅動公共價值</h2>
+          <p data-i18n="openText">專案以負責任的資料治理方式，促進跨機關協作、氣候調適與永續城市發展。</p>
+        </div>
+        <div class="sdg-grid">
+          <div class="sdg-card"><b>SDG 11</b><span data-i18n="sdg11">永續城市與社區</span></div>
+          <div class="sdg-card"><b>SDG 13</b><span data-i18n="sdg13">氣候行動</span></div>
+          <div class="sdg-card"><b>SDG 15</b><span data-i18n="sdg15">陸域生態</span></div>
+          <div class="sdg-card"><b>SDG 17</b><span data-i18n="sdg17">全球夥伴關係</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-heading split">
+          <div>
+            <span class="section-tag" data-i18n="teamTag">OUR TEAM</span>
+            <h2 data-i18n="teamTitle">跨域、跨國的韌性創新團隊</h2>
+          </div>
+          <p data-i18n="teamText">結合資訊系統、人工智慧、災害韌性、永續與國際合作能力。</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-member"><div class="avatar">DC</div><h3>CHEN-DE-EN</h3><p data-i18n="roleLead">Team Lead / System Integration</p></article>
+          <article class="team-member"><div class="avatar">YC</div><h3>YI-CHEN CHU</h3><p data-i18n="roleTeam">Project Team Member</p></article>
+          <article class="team-member"><div class="avatar">GC</div><h3>Guan-Xin Chen</h3><p data-i18n="roleTeam">Project Team Member</p></article>
+          <article class="team-member"><div class="avatar">QZ</div><h3>Quan-Yu Zhang</h3><p data-i18n="roleTeam">Project Team Member</p></article>
+          <article class="team-member"><div class="avatar">CC</div><h3>CHIA-JUI CHIANG</h3><p data-i18n="roleTeam">Project Team Member</p></article>
+          <article class="team-member"><div class="avatar">CX</div><h3>Cheng-En Xiao</h3><p data-i18n="roleTeam">Project Team Member</p></article>
+          <article class="team-member"><div class="avatar">KN</div><h3>Kaito Nakatake</h3><p data-i18n="roleInternational">International Collaboration</p></article>
+          <article class="team-member"><div class="avatar">JH</div><h3>John Harrison</h3><p data-i18n="roleAdvisor">Sustainability & Resilience Advisor</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div>
+          <span class="section-tag light" data-i18n="ctaTag">EXPLORE THE PROJECT</span>
+          <h2 data-i18n="ctaTitle">看見 AI 如何讓災害資訊真正成為行動</h2>
+          <p data-i18n="ctaText">觀看系統展示影片，或前往 GitHub 瞭解技術架構與專案內容。</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-white" href="https://www.youtube.com/" target="_blank" rel="noopener" data-i18n="watchDemo">觀看 Demo 影片</a>
+          <a class="btn btn-outline-white" href="https://github.com/" target="_blank" rel="noopener" data-i18n="viewGithub">查看 GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark">
+            <svg viewBox="0 0 48 48"><path d="M24 4C14 4 7 11.4 7 21c0 12.2 13 22.5 16.1 24.8a1.5 1.5 0 0 0 1.8 0C28 43.5 41 33.2 41 21 41 11.4 34 4 24 4Zm0 8.2a8.8 8.8 0 1 1 0 17.6 8.8 8.8 0 0 1 0-17.6Z"/></svg>
+          </span>
+          <span><strong>FlowResilienceAI</strong><small>Earth System Intelligence Lab</small></span>
+        </a>
+        <p data-i18n="footerText">An AI-Powered Landslide and Flood Resilience Platform.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#overview" data-i18n="navOverview">專案概覽</a>
+        <a href="#features" data-i18n="navFeatures">核心功能</a>
+        <a href="#architecture" data-i18n="navArchitecture">系統架構</a>
+        <a href="#team" data-i18n="navTeam">團隊</a>
+      </div>
+      <div class="footer-contact">
+        <strong data-i18n="contact">聯絡我們</strong>
+        <a href="mailto:nutccsieandy@gmail.com">nutccsieandy@gmail.com</a>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 FlowResilienceAI Project Team. All rights reserved.</div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
